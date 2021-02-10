@@ -1,0 +1,3 @@
+<tr><td>2</td><td>Cama</td><td>Casdasdlaw</td><td>50</td></tr>
+<tr><td>1</td><td>Vent</td><td>VentiladorASD</td><td>25</td></tr>
+<tr><td>1</td><td>Papitas</td><td>Papas fritas</td><td>5</td></tr>

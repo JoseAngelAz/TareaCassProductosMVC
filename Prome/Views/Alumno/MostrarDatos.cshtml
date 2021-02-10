@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "MostrarDatos";
+}
+
+<br />
+<br />
+
+<center>
+    <h2>Detalles del producto</h2>
+</center>
+<br />
+
+    <table class="table table-responsive ">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Precio</th>
+               
+        </thead>
+
+        <tbody>
+            @Html.Raw(ViewData["datos"])
+        </tbody>
+    </table>
+<br />
+
+<a href="/Alumno/ImprimirPDF" class="btn btn-success" target="_blank">Imprimir PDF</a>

@@ -1,0 +1,61 @@
+﻿<!--Enviar datos al modelo-->
+@model Prome.Models.RegistroAlumnos
+@{
+    ViewBag.Title = "AgregarAlumno";
+}
+
+<center>
+    <h2>AgregarAlumno</h2>
+</center>
+
+@using (Html.BeginForm("AgregarAlumno", "Alumno", FormMethod.Post))
+{
+<table>
+    <tr>
+        <td>ID</td>
+        <td>
+            <!-- TexboxFor asociado a campo del modelo-->
+            <!-- x=> para lamba-->
+            @Html.TextBoxFor(x => x.id, new { @class = "form-control" })
+            <!--Ponemos null para que no nos exija colocar un alert, ya que desde el modelo lo enviamos-->
+            @Html.ValidationMessageFor(x => x.id, null, new { @class = "text-danger" })
+        </td>
+    </tr>
+    <tr>
+        <td>Nombre</td>
+        <td>
+            <!-- TexboxFor asociado a campo del modelo-->
+            <!-- x=> para lamba-->
+            @Html.TextBoxFor(x => x.nombre, new { @class = "form-control" })
+            <!--Ponemos null para que no nos exija colocar un alert, ya que desde el modelo lo enviamos-->
+            @Html.ValidationMessageFor(x => x.nombre, null, new { @class = "text-danger" })
+        </td>
+    </tr>
+    <tr>
+        <td>Descripcion</td>
+        <td>
+            <!-- TexboxFor asociado a campo del modelo-->
+            <!-- x=> para lamba-->
+            @Html.TextBoxFor(x => x.descripcion, new { @class = "form-control" })
+            <!--Ponemos null para que no nos exija colocar un alert, ya que desde el modelo lo enviamos-->
+            @Html.ValidationMessageFor(x => x.descripcion, null, new { @class = "text-danger" })
+        </td>
+    </tr>
+    <tr>
+        <td>Precio</td>
+        <td>
+            <!-- TexboxFor asociado a campo del modelo-->
+            <!-- x=> para lamba-->
+            @Html.TextBoxFor(x => x.precio, new { @class = "form-control" })
+            <!--Ponemos null para que no nos exija colocar un alert, ya que desde el modelo lo enviamos-->
+            @Html.ValidationMessageFor(x => x.precio, null, new { @class = "text-danger" })
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Guardar datos" class="btn btn-default"/>
+        </td>
+    </tr>
+</table>
+}
+
